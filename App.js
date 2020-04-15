@@ -1,6 +1,6 @@
 import { AppLoading } from 'expo';
-// import { Asset } from 'expo-asset';
-// import * as Font from 'expo-font';
+import { Asset } from 'expo-asset';
+import * as Font from 'expo-font';
 import React, { useState } from 'react';
 import { Platform, StatusBar, StyleSheet, View } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
@@ -15,7 +15,7 @@ export default function App(props) {
   if (!isLoadingComplete && !props.skipLoadingScreen) {
     return (
       <AppLoading
-        // startAsync={loadResourcesAsync}
+        startAsync={loadResourcesAsync}
         onError={handleLoadingError}
         onFinish={() => handleFinishLoading(setLoadingComplete)}
       />
